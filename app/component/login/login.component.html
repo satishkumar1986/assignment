@@ -1,0 +1,7 @@
+<div class="loginarea">
+    <h1>sCart</h1>
+    <input type="text" placeholder="User Name" [(ngModel)]="loginModel.User" name ="User" class="loginInput">
+    <input type="password" placeholder="password" [(ngModel)]="loginModel.Password" name ="Password" class="loginInput">
+    <button placeholder="Submit" (click)="login()">Submit</button>
+    <span *ngIf="loginError">{{ loginIssue }}</span>
+</div>

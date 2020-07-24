@@ -1,0 +1,10 @@
+<div class="parent">
+    <div class="logo">LOGO</div>
+    <div class="search"><input type="search" id="txtSearchText" 
+        name="SearchText" [(ngModel)]="searchText"  (keyup)="autoComplete($event)" autocomplete="off"></div>
+    <div class="user">
+        <a><img src="assets/user.png">Welcome {{ currentUser | uppercase }}</a>
+        <a><img src="assets/cart.png">{{ cartNumber }} Item</a>
+    </div>
+    
+</div>

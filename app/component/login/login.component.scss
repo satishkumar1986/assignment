@@ -1,0 +1,31 @@
+.loginarea{
+    width: 400px;
+    height: 300px;
+    border: 1px solid gray;
+    margin: 10% 35%;
+    & h1 {
+        font-size: 25px;
+        font-style: italic;
+    }
+    & input {
+        padding: 5px 5px 5px 5px;
+        display: block;
+        margin: 10% 10%;
+        border-radius: 5px;
+        background-color: #cabbbb;
+        color: gray;
+        text-align: center;
+        width: 80%;
+    }
+    & button {
+        margin-left: 43%;
+        padding:10px;
+        border-radius: 5px;
+    }
+    & span {
+        display: block;
+        color: red;
+        font-weight: bold;
+        margin-top: 5%;
+    }
+}

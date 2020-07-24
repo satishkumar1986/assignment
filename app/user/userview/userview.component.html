@@ -1,0 +1,88 @@
+<app-header (currentSearch) = "searchProduct($event)"></app-header>
+<div class="conatiner">
+    <div class="sidebar">
+        <div class="filters"> Filter</div>
+        <div class="filtertype">
+            <div class="filter">
+                <p>Color</p>
+                <div class="filter-option"> 
+                    <div *ngFor="let color of colours">
+                        <input type="checkbox">{{ color }}
+                    </div>
+                </div>
+            </div>
+            <div class="filter"> 
+                <p>Brand</p>
+                <div class="filter-option">
+                    <div *ngFor="let brand of brands">
+                        <input type="checkbox">{{ brand }}
+                    </div>
+                </div>
+            </div>
+            <div class="filter"> 
+                <p>Price</p>
+                <div class="filter-container">
+                    <div>
+                        <select name="cars" id="cars">Price
+                            <option value="Min">Min</option>
+                            <option value="2000">200$</option>
+                            <option value="4000">500$</option>
+                            <option value="6000">800$</option>
+                            <option value="10000">1500$</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="cars" id="cars">Max
+                            <option value="Max">Max</option>
+                            <option value="10000">1500$</option>
+                            <option value="6000">800$</option>
+                            <option value="4000">500$</option>
+                            <option value="2000">200$</option>
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="filter">
+                <p>Discount</p>
+                <div class="filter-container">
+                    <div>
+                        <select name="cars" id="cars">Discount
+                            <option value="Min">Min</option>
+                            <option value="2000">2000</option>
+                            <option value="4000">4000</option>
+                            <option value="6000">6000</option>
+                            <option value="10000">10000</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="cars" id="cars">Max
+                            <option value="Max">Max</option>
+                            <option value="10000">10000</option>
+                            <option value="6000">6000</option>
+                            <option value="4000">4000</option>
+                            <option value="2000">2000</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product-container">
+        <div class="product" *ngFor="let product of productList; let i = index">
+            <img src='{{product.image}}'>
+            <div class="product-detail">
+                <div>
+                    <p>{{ product.title }}</p>
+                    <p>{{ product.brand}}</p>
+                    <p>{{ product.price.final_price }}$</p>
+                </div>
+                <div>
+                    <p>Color: <span>{{ product.colour.title }}</span></p>
+                    <button>+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
